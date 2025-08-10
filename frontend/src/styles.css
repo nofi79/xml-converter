@@ -1,0 +1,13 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root{
+  /* Azul Fumaça */
+  --smoke-blue: #6785C1;
+}
+
+body{ @apply bg-gray-50 text-gray-900; }
+.card{ @apply bg-white rounded-2xl shadow p-4; border: 2px solid var(--smoke-blue); }
+.btn{ @apply px-4 py-2 rounded-xl shadow font-semibold; background: var(--smoke-blue); color:white; }
+.btn:disabled{ @apply opacity-50 cursor-not-allowed; }
