@@ -7,7 +7,7 @@ export default function App(){
       <div className="max-w-6xl mx-auto">
         <header className="mb-6">
           <h1 className="text-3xl font-extrabold" style={{color:'var(--smoke-blue)'}}>XML Converter • R4010 / R4020</h1>
-          <p className="text-gray-600">Validate, auto-fill minimally, batch every 50 files, and download converted lots.</p>
+          <p className="text-gray-600">Validação, Auto Preechimeto, Criação de Loet e download dos arquivos.</p>
         </header>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           <Pane kind="r4010" label="R4010" />
