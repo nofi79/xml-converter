@@ -1,0 +1,33 @@
+version: 1
+applications:
+  - appRoot: /
+    backend:
+      phases:
+        preBuild:
+          commands:
+            - cd backend
+            # Create and activate a virtual environment (Linux)
+            - python -m venv .venv
+            - source .venv/bin/activate
+            - pip install --upgrade pip
+            - pip install -r requirements.txt
+        build:
+          commands:
+            - echo "Backend build phase complete. (No additional build step)"
+    frontend:
+      phases:
+        preBuild:
+          commands:
+            - cd frontend
+            - npm install
+        build:
+          commands:
+            - npm run build
+      artifacts:
+        # Vite outputs build files into the "dist" folder by default.
+        baseDirectory: dist
+        files:
+          - '**/*'
+      cache:
+        paths:
+          - node_modules/**/*
