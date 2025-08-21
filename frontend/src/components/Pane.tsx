@@ -40,7 +40,7 @@ export default function Pane({kind,label}:{kind:'r4010'|'r4020', label:string}){
       {(status==='running' || status==='starting') && <ProgressBar done={done} total={total} />}
       {status==='done' && (
         <div className="flex items-center gap-2">
-          <span className="text-green-700 font-medium">Conversion finished.</span>
+          <span className="text-green-700 font-medium">Conversão finalizada.</span>
           <button className="btn" onClick={()=> job && download(job)}>Download ZIP</button>
         </div>
       )}
